@@ -5,7 +5,7 @@ const REMOVE = 'todos/REMOVE'; // todo를 제거함
 
 export const changeInput = (input) => ({
   type: CHANGE_INPUT,
-  input,
+  input
 });
 
 let id = 3; // insert가 호출될 때마다 1씩 더해집니다.
@@ -14,18 +14,18 @@ export const insert = (text) => ({
   todo: {
     id: id++,
     text,
-    done: false,
+    done: false
   },
 });
 
 export const toggle = (id) => ({
   type: TOGGLE,
-  id,
+  id
 });
 
 export const remove = (id) => ({
   type: REMOVE,
-  id,
+  id
 });
 
 const initialState = {
@@ -49,7 +49,7 @@ const initialState = {
       case CHANGE_INPUT:
         return {
           ...state,
-          input: action.input,
+          input: action.input
         };
       case INSERT:
         return {
